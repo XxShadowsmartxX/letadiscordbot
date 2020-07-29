@@ -28,8 +28,8 @@ client.on('message', message =>{
         client.commands.get('ping').execute(message, args);
     } else if (command == 'youtube'){
         client.commands.get('youtube').execute(message, args);
-    } else if (command === 'phase 1'){
-        client.commands.get('phase 1').execute(message, args);
+    } else if (command === 'phase1'){
+        client.commands.get('phase1').execute(message, args);
     }
  });
 
