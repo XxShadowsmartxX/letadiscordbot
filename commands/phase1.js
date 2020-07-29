@@ -4,10 +4,9 @@ module.exports = {
     name: 'phase1', 
     description: "this is a youtube command!", 
     execute(message, args){
-
+        message.channel.send('hi');
         if (message.member.roles.cache.has('716371210023338027')){
         const embed = new Discord.MessageEmbed()
-            message.channel.send('hi')
             .setColor('020f73')
             .setTitle('Phase 1 Announcement')
             .setAuthor('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
