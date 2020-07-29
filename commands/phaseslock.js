@@ -10,9 +10,7 @@ module.exports = {
             .setColor('020f73')
             .setTitle('Phase Slock Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`PHASE SLOCKED!
-
-            The phase has been slocked at ${message.setTimestamp}. If you missed this phase, there will be more hosted by our Instructor team! Do not worry.`)
+            .setDescription(`PHASE SLOCKED! The phase has been slocked at ${timestamp}. If you missed this phase, there will be more hosted by our Instructor team! Do not worry.`)
         message.channel.send(embed);
             message.delete()
 
