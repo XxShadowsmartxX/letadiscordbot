@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'phase1', 
+    name: 'phase 1', 
     description: "this is a youtube command!", 
     execute(message, args){
         message.channel.send('<@&716370077611720746>');
