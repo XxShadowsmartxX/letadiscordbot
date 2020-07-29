@@ -12,6 +12,7 @@ module.exports = {
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`A **Phase #** is being hosted right now.\n\nPhase is being hosted by: ${message.author}\n\nPhase is being slocked at: **${message.content}**\n\n**Campus Link:** https://www.roblox.com/games/5046852624/ALETA-Campus?refPageId=703da718-c993-4ed5-b154-4b2f3017c2ba#`)
         message.channel.send(embed);
+        args.slice(0).join(" ")
             message.delete()
 
         } else {
