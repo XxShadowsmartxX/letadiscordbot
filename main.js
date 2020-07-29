@@ -36,6 +36,8 @@ client.on('message', message =>{
     client.commands.get('phase3').execute(message, args);
     } else if (command === 'phase4'){
     client.commands.get('phase4').execute(message, args);
+    } else if (command === 'phaseslock'){
+    client.commands.get('phaseslock').execute(message. args);
     }
  });
 
