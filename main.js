@@ -30,6 +30,12 @@ client.on('message', message =>{
         client.commands.get('youtube').execute(message, args);
     } else if (command === 'phase1'){
         client.commands.get('phase1').execute(message, args);
+    } else if (command === 'phase2'){
+    client.commands.get('phase2').execute(message, args);
+    } else if (command === 'phase3'){
+    client.commands.get('phase3').execute(message, args);
+    } else if (command === 'phase4'){
+    client.commands.get('phase4').execute(message, args);
     }
  });
 
