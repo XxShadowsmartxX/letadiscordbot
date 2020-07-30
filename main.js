@@ -38,6 +38,8 @@ client.on('message', message =>{
     client.commands.get('phasesl').execute(message, args);
     } else if (command === 'phasecl'){
     client.commands.get('phasecl').execute(message, args);
+    } else if (command === 'help'){
+    client.commands.get('help').execute(message, args);
     }
  });
 
