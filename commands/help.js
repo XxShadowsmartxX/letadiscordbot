@@ -6,7 +6,6 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
-            message.channel.send(`${message.author}`)
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
             .setTitle('All Commands')
