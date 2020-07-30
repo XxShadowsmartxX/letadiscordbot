@@ -16,6 +16,7 @@ for(const file of commandFiles){
 }
 client.once('ready', () => {
     console.log('ALETA Bot is Online!');
+    client.user.setActivity('pacman')
 });
 
 client.on('message', message =>{
