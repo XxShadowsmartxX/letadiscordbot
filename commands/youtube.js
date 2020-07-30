@@ -6,7 +6,7 @@ module.exports = {
     execute(message, args){
 
         if (message.member.roles.cache.has('705082980770512996')){
-        message.channel.send(`ndog do be kinda gay tho`);
+        message.channel.send(`ndog do be kinda gay tho. he do be sucking on dem buttplug tho`);
         message.delete()
 
         } else {
