@@ -10,8 +10,8 @@ module.exports = {
             .setColor('020f73')
             .setDescription(`testing ${args[0]}`)
         message.channel.send(embed);
-        message.react("✅")
-        message.react("✅")
+        message.react("✅");
+        message.react("✅");
 
         } else {
             message.channel.send('Insufficient Permissions.');
