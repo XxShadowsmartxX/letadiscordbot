@@ -11,7 +11,6 @@ module.exports = {
             .setTitle('Phase Slock Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`**This phase has been slocked**\n\nMore phases will be hosted by the LETA Instructor Team.`)
-            message.channel.send('<@&716370077611720746>');
         message.channel.send(embed);
             message.delete()
 
