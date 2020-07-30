@@ -16,8 +16,9 @@ for(const file of commandFiles){
 }
 client.once('ready', () => {
     console.log('ALETA Bot is Online!');
-    client.user.setStatus('dnd', 'Made by KwinkyWolf') 
 });
+
+client.user.setStatus('dnd', 'Made by KwinkyWolf');
 
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot)return; 
