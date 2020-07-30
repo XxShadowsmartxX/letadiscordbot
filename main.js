@@ -15,7 +15,7 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 client.once('ready', () => {
-    console.log('Aigio Bot is Online!');
+    console.log('ALETA Bot is Online!');
 });
 
 client.on('message', message =>{
@@ -24,10 +24,8 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } else if (command == 'youtube'){
-        client.commands.get('youtube').execute(message, args);
+     if (command == 'ndog'){
+        client.commands.get('ndog').execute(message, args);
     } else if (command === 'phase1'){
         client.commands.get('phase1').execute(message, args);
     } else if (command === 'phase2'){
@@ -36,8 +34,10 @@ client.on('message', message =>{
     client.commands.get('phase3').execute(message, args);
     } else if (command === 'phase4'){
     client.commands.get('phase4').execute(message, args);
-    } else if (command === 'psl'){
-    client.commands.get('psl').execute(message, args);
+    } else if (command === 'phasesl'){
+    client.commands.get('phasesl').execute(message, args);
+    } else if (command === 'phasecl'){
+    client.commands.get('phasecl').execute(message, args);
 
     }
  });
