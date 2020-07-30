@@ -17,11 +17,14 @@ for(const file of commandFiles){
 client.once('ready', () => {
     console.log('ALETA Bot is Online!');
 
-    client.user.setPresence({
-        game: {
-            name: 'testing',
-            type: 'STREAMING',
-        }
+    client.on('ready', () => {
+        client.user.setStatus('available')
+        client.user.setPresence({
+            game: {
+                name: 'with depression',
+                type: "STREAMING",
+            }
+        });
     });
 });
 
