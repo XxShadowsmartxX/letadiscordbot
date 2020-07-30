@@ -5,7 +5,6 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         if (message.member.roles.cache.has('716371210023338027')){
-        } else if (message.member.roles.cache.has('716370179982098543')){ 
             message.channel.send('<@&716371210023338027>')
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
