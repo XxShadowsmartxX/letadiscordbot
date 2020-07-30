@@ -4,8 +4,8 @@ module.exports = {
     name: 'phase3', 
     description: "this is a youtube command!", 
     execute(message, args){
-        message.channel.send('<@&716370077611720746>');
-        if (message.member.roles.cache.has('716371210023338027')){
+        if (message.member.roles.cache.has('705082980770512996')){
+            message.channel.send('<@&705082999292559430> <@&705082979784851596>');
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
             .setTitle('Phase 3 Notification')
