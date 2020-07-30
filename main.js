@@ -38,8 +38,8 @@ client.on('message', message =>{
     client.commands.get('phase4').execute(message, args);
     } else if (command === 'psl'){
     client.commands.get('psl').execute(message, args);
-    
+
     }
  });
 
-client.login(process.env.token);
+client.login('NzM4MDU2OTk4Nzg0MDczNzI4.XyGXJA.NhTc_XdX2rI1d-NuoTFR3Pwc2Ls');
