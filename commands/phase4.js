@@ -5,8 +5,8 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         if (message.member.roles.cache.has('716371210023338027')){
+            message.channel.send('<@&716371210023338027>')
         const embed = new Discord.MessageEmbed()
-            .setContent('testing')
             .setColor('020f73')
             .setTitle('Phase 4 Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
