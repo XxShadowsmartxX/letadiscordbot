@@ -6,6 +6,7 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
+            message.channel.send('<@&705082999292559430>')
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
             .setTitle('Phase 3 Conclusion Notification')
