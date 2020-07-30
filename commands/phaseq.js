@@ -6,12 +6,9 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
-        const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
-            .setDescription(`testing ${args[0]}`)
-        message.channel.send(embed);
-        message.react("✅");
-        message.react("✅");
+        message.channel.send(`ndog do be kinda gay tho. he do be sucking on dem buttplug tho`);
+        message.react('✅')
+        message.react('✅')
 
         } else {
             message.channel.send('Insufficient Permissions.');
