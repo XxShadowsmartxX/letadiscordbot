@@ -6,6 +6,7 @@ module.exports = {
     execute(message, args){
         message.channel.send('<@&716370077611720746>');
         if (message.member.roles.cache.has('716371210023338027')){
+        } else if (message.member.roles.cache.has('716370179982098543')){ 
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
             .setTitle('Phase 1 Notification')
