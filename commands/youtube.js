@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'youtube', 
+    name: 'ndog', 
     description: "this is a youtube command!", 
     execute(message, args){
 
-        if (message.member.roles.cache.has('716371210023338027')){
-        message.channel.send(`:signature: Hi ${message.author}`);
+        if (message.member.roles.cache.has('705082980770512996')){
+        message.channel.send(`ndog do be kinda gay tho`);
         message.delete()
 
         } else {
