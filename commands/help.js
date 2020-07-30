@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'help', 
+    name: 'support', 
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
