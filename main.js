@@ -41,8 +41,14 @@ client.on('message', message =>{
     client.commands.get('phasecl').execute(message, args);
     } else if (command === 'support'){
     client.commands.get('support').execute(message, args);
-    } else if (command === 'phaseq'){
-    client.commands.get('phaseq').execute(message, args);
+    } else if (command === 'phase1cl'){
+    client.commands.get('phase1cl').execute(message, args);
+    } else if (command === 'phase2cl'){
+    client.commands.get('phase2cl').execute(message, args);
+    } else if (command === 'phase3cl'){
+    client.commands.get('phase3cl').execute(message, args);
+    } else if (command === 'phase4cl'){
+    client.commands.get('phase4cl').execute(message, args);
     }
  });
 
