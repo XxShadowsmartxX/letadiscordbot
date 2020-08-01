@@ -51,6 +51,8 @@ client.on('message', message =>{
     client.commands.get('phase4cl').execute(message, args);
     } else if (command === 'enrollopen'){
     client.commands.get('enrollopen').execute(message, args);
+} else if (command === 'enrollclose'){
+    client.commands.get('enrollclose').execute(message, args);
     }
  });
 
