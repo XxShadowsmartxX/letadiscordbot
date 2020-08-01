@@ -14,7 +14,7 @@ for(const file of commandFiles){
 
     client.commands.set(command.name, command);
 }
-client.once('ready', () => {
+    client.once('ready', () => {
     console.log('ALETA Bot is Online!');
     client.user.setActivity('-support')
 });
