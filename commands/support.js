@@ -5,7 +5,7 @@ const client = new Discord.Client();
 module.exports = {
     name: 'support', 
     description: "support command", 
-    execute(message, args){
+    execute(message, args, channel){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
         const embed = new Discord.MessageEmbed()
