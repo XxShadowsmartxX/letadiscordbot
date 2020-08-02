@@ -5,10 +5,12 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
+        const channel = client.channels.cache.get('706042137510412308');
+        channel.send(`${message.content}`);
         if (message.member.roles.cache.has('705082980770512996')){
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
-            .setDescription(`ndog do be kinda gay tho. he do be sucking on dem buttplugs.`)
+            .setDescription(`hi`)
         message.channel.send(embed);
 
         } else {
