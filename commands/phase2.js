@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 
+const channel = client.channels.cache.get('710960625135779911');
+
+channel.send(`${message.content}`);
+
 module.exports = {
     name: 'phase2', 
     description: "this is a youtube command!", 
