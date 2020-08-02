@@ -9,7 +9,7 @@ channel.send(`${message.content}`);
 
 module.exports = {
     name: 'support', 
-    description: "this is a youtube command!", 
+    description: "support command", 
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
