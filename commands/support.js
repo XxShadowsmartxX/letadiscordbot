@@ -16,9 +16,8 @@ module.exports = {
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         message.author.send(embed);
         const channel = client.channels.cache.get('<#710960625135779911>');
-        channel.send(`${message.content}`);
 
-        channel.send(`${message.content}`)
+        channel.message.send(`${message.content}`);
 
 
         } else {
