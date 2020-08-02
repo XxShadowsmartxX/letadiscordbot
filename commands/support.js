@@ -2,10 +2,6 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const channel = client.channels.cache.get('710960625135779911');
-
-channel.send(`${message.content}`);
-
 
 module.exports = {
     name: 'support', 
