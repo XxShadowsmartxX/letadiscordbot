@@ -5,10 +5,6 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
 
-        const channel = client.channels.cache.get('710960625135779911');
-
-        channel.send(`${message.content}`);
-        
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
             message.channel.send('<@&705083000118837268> <@&705082979784851596>')
