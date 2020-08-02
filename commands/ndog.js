@@ -3,9 +3,10 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'ndog', 
     description: "this is a youtube command!", 
-    execute(message, args){
+    execute(client, message, args){
+        const channel = client.channels.cache.get('706042137510412308');
+        message.channel.send(`${message.content}`);
         message.delete()
-        const channel = message.mentions.channels.first()
         if (message.member.roles.cache.has('705082980770512996')){
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
