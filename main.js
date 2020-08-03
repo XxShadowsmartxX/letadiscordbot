@@ -51,9 +51,9 @@ client.on('message', message =>{
     client.commands.get('phase4cl').execute(message, args);
     } else if (command === 'enrollopen'){
     client.commands.get('enrollopen').execute(message, args);
-} else if (command === 'enrollclose'){
+    } else if (command === 'enrollclose'){
     client.commands.get('enrollclose').execute(message, args);
     }
  });
 
-client.login(process.env.token);
+client.login('NzM4MDU2OTk4Nzg0MDczNzI4.XyGXJA.NhTc_XdX2rI1d-NuoTFR3Pwc2Ls');
