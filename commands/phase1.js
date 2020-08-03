@@ -8,7 +8,6 @@ module.exports = {
         if (message.member.roles.cache.has('705082980770512996')){
             message.channel.send('<@&705088849692590260> <@&705082979784851596>')
         const embed = new Discord.MessageEmbed()
-        message.channel.send('<@&705088849692590260> <@&705082979784851596>')
             .setColor('020f73')
             .setTitle('Phase 1 Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
