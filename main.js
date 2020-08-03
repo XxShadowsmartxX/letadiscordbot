@@ -53,6 +53,8 @@ client.on('message', message =>{
     client.commands.get('enrollopen').execute(message, args);
     } else if (command === 'enrollclose'){
     client.commands.get('enrollclose').execute(message, args);
+    } else if (command === 'finalexam'){
+    client.commands.get('finalexam').execute(message, args);
     }
  });
 
