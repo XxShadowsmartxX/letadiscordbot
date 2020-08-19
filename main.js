@@ -61,8 +61,6 @@ client.on('message', message =>{
     client.commands.get('botmaindone').execute(message, args);
 } else if (command === 'finalexamclose'){
     client.commands.get('finalexamclose').execute(message, args);
-} else if (command === 'suspend'){
-    client.commands.get('suspend').execute(message, args);
     }
  });
 
