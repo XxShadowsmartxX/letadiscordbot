@@ -8,7 +8,7 @@ module.exports = {
     execute(message, args, channel){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
-            message.channel.send('hi');
+            message.mention.send('hi');
 
 
         } else {
