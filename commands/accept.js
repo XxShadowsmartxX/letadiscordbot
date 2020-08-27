@@ -6,8 +6,8 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082977209548870')){
-            message.mentions.users.first();
-            message.mention.send('accepted');
+            const msg = message.mentions.users.first();
+            msg.send('hi')
             
 
         } else {
