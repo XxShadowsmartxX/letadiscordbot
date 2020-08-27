@@ -7,7 +7,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705082977209548870')){
             const msg = message.mentions.users.first();
-            const msg = message.guild.members.cache.get("id")
+            message.guild.members.cache.get("id")
             msg.send('Your LETA certification has been revoked by the LETA Administration.')
             
 
