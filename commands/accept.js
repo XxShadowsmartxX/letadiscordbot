@@ -6,8 +6,8 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082977209548870')){
-            message.mentions.users.first()
-            message.user.send('sup')
+            message.mentions.users.first('hi')
+            
 
         } else {
             message.channel.send('Insufficient Permissions.');
