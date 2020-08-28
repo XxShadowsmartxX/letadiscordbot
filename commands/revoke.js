@@ -24,7 +24,7 @@ module.exports = {
         .setTitle('Revoke Command')
         .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         .addFields(
-            { name: 'Command Usage', value: `${message.content}` },
+            { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-revoke**', inline: true },
             { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
