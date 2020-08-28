@@ -26,7 +26,7 @@ module.exports = {
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-revoke**', inline: true },
-            { name: 'Command Author', value: `${message.author}`, inline: true },
+            { name: 'Command Author', value: `${message.author.username}#${message.author.discriminator}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
         )
         .setFooter('Aigio Law Enforcement Training Academy')
