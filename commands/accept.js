@@ -13,7 +13,7 @@ module.exports = {
             msg.send('accepted')
 
             const mst = message.client.channels.cache.get('710960625135779911')
-            mst.send(`**Accept** command used in ${channel}`)
+            mst.send(`**Accept** command used in ${message.author}`)
         } else {
             message.channel.send('Insufficient Permissions.');
         }
