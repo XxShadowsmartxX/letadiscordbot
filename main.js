@@ -63,6 +63,8 @@ client.on('message', message =>{
     client.commands.get('finalexamclose').execute(message, args);
     } else if (command === 'accept'){
     client.commands.get('accept').execute(message, args);
+    } else if (command === 'revoke'){
+    client.commands.get('revoke').execute(message, args);
     }
  });
 
