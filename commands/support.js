@@ -16,6 +16,9 @@ module.exports = {
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         message.author.send(embed);
 
+        const mst = message.client.channels.cache.get('710960625135779911')
+        mst.send(`**Support** command used by **${message.author.username}** in ${message.channel}.\nCommand usage: **${message.content}**`)
+
 
         } else {
             message.channel.send('Insufficient Permissions.');
