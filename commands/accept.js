@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const client = new Discord.Client();
+
 module.exports = {
     name: 'accept', 
     description: "this is a youtube command!", 
@@ -8,10 +10,10 @@ module.exports = {
         if (message.member.roles.cache.has('705082977209548870')){
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
-            msg.send('Your LETA certification has been revoked by the LETA Administration.')
+            msg.send('accepted')
 
-            const channel = channels.cache.get('710960625135779911');
-            channel.send('sup g');
+            const mst = client.channels.cache.get('710960625135779911');
+            mst.send('sup');
         } else {
             message.channel.send('Insufficient Permissions.');
         }
