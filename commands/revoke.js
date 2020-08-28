@@ -21,7 +21,6 @@ module.exports = {
         .setColor('020f73')
         .setTitle('Revoke Command')
         .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-        .setDescription(`**Command Usage:** ${message.content}`)
         .addFields(
             { name: 'Command Usage', value: `${message.content}` },
             { name: 'Command Used', value: '**-revoke**', inline: true },
