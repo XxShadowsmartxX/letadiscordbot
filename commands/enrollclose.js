@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const client = new Discord.Client();
+
 module.exports = {
     name: 'enrollclose', 
     description: "this is a youtube command!", 
@@ -14,6 +16,9 @@ module.exports = {
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addField('Enrollment Opening Date', `${args[0]} ${args[1]} ${args[2]} ${args[3]} ${args[4]}`, true)
         message.channel.send(embed);
+
+        const mst = message.client.channels.cache.get('710960625135779911')
+        mst.send(`**Enrollclose** command used by **${message.author.username}** in ${message.channel}.\nCommand usage: **${message.content}**`)
 
         } else {
             message.channel.send('Insufficient Permissions.');
