@@ -10,7 +10,7 @@ module.exports = {
             message.guild.members.cache.get(args[0])
             msg.send('Your LETA certification has been revoked by the LETA Administration.')
 
-            const channel = client.channels.cache.get('710960625135779911');
+            const channel = channels.cache.get('710960625135779911');
             channel.send('sup g');
         } else {
             message.channel.send('Insufficient Permissions.');
