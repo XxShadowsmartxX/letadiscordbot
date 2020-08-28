@@ -4,8 +4,6 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "nf start",
-    "watch": "nodemon --watch directory-to-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "S_hadowRBLX",
