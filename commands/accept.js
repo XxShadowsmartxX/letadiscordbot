@@ -12,7 +12,7 @@ module.exports = {
             message.guild.members.cache.get(args[0])
             msg.send('accepted')
 
-            const mst = client.channels.cache.get('710960625135779911')
+            const mst = message.client.channels.cache.get('710960625135779911')
             mst.send('sup')
         } else {
             message.channel.send('Insufficient Permissions.');
