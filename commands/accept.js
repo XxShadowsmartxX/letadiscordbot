@@ -6,13 +6,9 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082977209548870')){
-            const msg = message.mentions.users.first();
+            const msg = message.mentions.users.first() || 
+            message.guild.members.cache.get(args[0])
             msg.send('Your LETA certification has been revoked by the LETA Administration.')
-
-            const mes = message.guild.members.cache.get(args[0]);
-            mes.send('Henlo');
-            
-
         } else {
             message.channel.send('Insufficient Permissions.');
         }
