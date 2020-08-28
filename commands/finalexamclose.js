@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const client = new Discord.Client();
+
 module.exports = {
     name: 'finalexamclose', 
     description: "this is a youtube command!", 
@@ -13,6 +15,9 @@ module.exports = {
             .setAuthor('ALETA Examination System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription('**Final examinations have now closed!**\n\nAnyone who has not finished their final exam will now be purged and may apply next class if they wish.\nAnyone that failed all attempts will also be purged and may apply next class.\n\n> Thank you for understanding!')
         message.channel.send(embed);
+
+        const mst = message.client.channels.cache.get('710960625135779911')
+        mst.send(`**Finalexamclose** command used by **${message.author.username}** in ${message.channel}.\nCommand usage: **${message.content}**`)
 
         } else {
             message.channel.send('Insufficient Permissions.');
