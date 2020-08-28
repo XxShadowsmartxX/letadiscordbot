@@ -10,7 +10,7 @@ module.exports = {
         if (message.member.roles.cache.has('705082977209548870')){
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
-            msg.send('accepted')
+            msg.send('hi im doing some message testing, dont be alarmed if u see this message - dd s_hadowrblx')
 
             const mst = message.client.channels.cache.get('710960625135779911')
             mst.send(`**Accept** command used by **${message.author.username}** in ${message.channel}.\nCommand usage: **${message.content}**`)
