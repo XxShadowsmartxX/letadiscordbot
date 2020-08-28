@@ -25,8 +25,8 @@ module.exports = {
         .setFooter('Slocked Time')
         .setTimestamp()
 
-        const mst = message.client.channels.cache.get('710960625135779911')
-        mst.send(embed)
+        const mst = message.client.channels.cache.get('710960625135779911');
+        mst.send(embed);
 
         } else {
             message.channel.send('Insufficient Permissions.');
