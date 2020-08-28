@@ -17,7 +17,7 @@ module.exports = {
             .setTimestamp()
         message.channel.send(embed);
 
-        const embed = new Discord.MessageEmbed()
+        const modlogs = new Discord.MessageEmbed()
         .setColor('020f73')
         .setTitle('Phase Server Lock Notification')
         .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
@@ -26,7 +26,7 @@ module.exports = {
         .setTimestamp()
 
         const mst = message.client.channels.cache.get('710960625135779911');
-        mst.send(embed);
+        mst.send(modlogs);
 
         } else {
             message.channel.send('Insufficient Permissions.');
