@@ -16,7 +16,7 @@ for(const file of commandFiles){
 }
     client.once('ready', () => {
     console.log('ALETA Bot is Online!');
-    client.user.setActivity('-support')
+    client.user.setActivity('-support', { type: 'WATCHING' });
 });
 
 client.on('message', message =>{
@@ -25,8 +25,8 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-     if (command == 'ndog'){
-        client.commands.get('ndog').execute(message, args);
+     if (command == 'reset'){
+        client.commands.get('reset').execute(message, args);
     } else if (command === 'phase1'){
         client.commands.get('phase1').execute(message, args);
     } else if (command === 'phase2'){
@@ -55,16 +55,16 @@ client.on('message', message =>{
     client.commands.get('enrollclose').execute(message, args);
     } else if (command === 'finalexam'){
     client.commands.get('finalexam').execute(message, args);
-    } else if (command === 'botmain'){
-    client.commands.get('botmain').execute(message, args);
-    } else if (command === 'botmaindone'){
-    client.commands.get('botmaindone').execute(message, args);
     } else if (command === 'finalexamclose'){
     client.commands.get('finalexamclose').execute(message, args);
     } else if (command === 'accept'){
     client.commands.get('accept').execute(message, args);
     } else if (command === 'revoke'){
     client.commands.get('revoke').execute(message, args);
+    } else if (command === 'suspend'){
+    client.commands.get('suspend').execute(message, args);
+    } else if (command === 'say'){
+    client.commands.get('say').execute(message, args);
     }
  });
 

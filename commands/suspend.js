@@ -3,16 +3,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
-    name: 'accept', 
+    name: 'suspend', 
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705101158766870528')){
         const embed = new Discord.MessageEmbed()
             .setColor('020f73')
-            .setTitle('Academy Acceptance Notice')
+            .setTitle('Certification Suspension Notice')
             .setAuthor('ALETA Administrative Notice', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`To ${args[0]},\n\nYou have been successfully accepted and enrolled within the Aigio Law Enforcement Training Academy. We congratulate you on this achievement. You will need to complete 4 phases and a final exam at the end of your journey. After that, you will become a certified peace officer. Once again, congratulations.\n\n> Please rejoin the ALETA discord to get your updated roles automatically.\n> Be sure to join the ALETA Roblox Group if you haven't already.\n\n**Regards,**\nAigio Law Enforcement Training Academy;Admissions Team`)
+            .setDescription(`To ${args[0]},\n\nYour certification has been **suspended** by the ALETA Administration. The duration of this suspension is: **${args[1]} days**.\nInformation regarding your suspension can be found on the **'SUSPENSIONS'** sheet on the ALETA Database.\nIf your suspension is **longer than 2 weeks**, you are allowed to **appeal** it using the administrative hub form which can be found in the <#705431479433297971> channel. You may also appeal if you feel this suspension is false.\nYour investigation can be tracked on **'ADMIN HUB'** sheet on the ALETA Database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
             .setFooter('Aigio Law Enforcement Traning Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addField('Notice Sent By', `${message.author.username}#${message.author.discriminator}`, true)
             .setTimestamp()
@@ -21,12 +21,12 @@ module.exports = {
             msg.send(embed)
 
         const modlogs = new Discord.MessageEmbed()
-        .setColor('8305501')
-        .setTitle('Accept Command')
+        .setColor('14942465')
+        .setTitle('Suspend Command')
         .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
-            { name: 'Command Used', value: '**-accept**', inline: true },
+            { name: 'Command Used', value: '**-suspend**', inline: true },
             { name: 'Command Author', value: `${message.author.username}#${message.author.discriminator}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
         )
