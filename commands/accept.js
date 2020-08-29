@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705101158766870528')){
         const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('#0C3350')
             .setTitle('Academy Acceptance Notice')
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`To ${args[0]},\n\nYou have been successfully accepted and enrolled within the Aigio Law Enforcement Training Academy. We congratulate you on this achievement. You will need to complete 4 phases and a final exam at the end of your journey. After that, you will become a certified peace officer. Once again, congratulations.\n\n> Please rejoin the ALETA discord to get your updated roles automatically.\n> Be sure to join the ALETA Roblox Group if you haven't already.\n\n**Regards,**\nAigio Law Enforcement Training Academy;Admissions Team`)

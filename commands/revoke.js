@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705082977209548870')){
         const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('#0C3350')
             .setTitle('Certification Revoke Notice')
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`To ${args[0]},\n\nYour Aigio Law Enforcement Training Academy Certification has been **revoked** by the LETA Administration. You are allowed to appeal after **## days**. More information regarding this revocation can be found on the ALETA Database; Revokes Sheet.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)

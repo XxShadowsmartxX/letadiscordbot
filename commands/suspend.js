@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705101158766870528')){
         const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('#0C3350')
             .setTitle('Certification Suspension Notice')
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`To ${args[0]},\n\nYour certification has been **suspended** by the ALETA Administration. The duration of this suspension is: **${args[1]} days**.\nInformation regarding your suspension can be found on the **'SUSPENSIONS'** sheet on the ALETA Database.\nIf your suspension is **longer than 2 weeks**, you are allowed to **appeal** it using the administrative hub form which can be found in the <#705431479433297971> channel. You may also appeal if you feel this suspension is false.\nYour investigation can be tracked on **'ADMIN HUB'** sheet on the ALETA Database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
