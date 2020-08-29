@@ -65,6 +65,10 @@ client.on('message', message =>{
     client.commands.get('suspend').execute(message, args);
     } else if (command === 'say'){
     client.commands.get('say').execute(message, args);
+    } else if (command === 'blacklist'){
+    client.commands.get('blacklist').execute(message, args);
+    } else if (command === 'permblacklist'){
+    client.commands.get('permblacklist').execute(message, args);
     }
  });
 
