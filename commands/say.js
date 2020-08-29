@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
 
-            message.channel.send(`${args.slice(1).join(' ')}`);
+            message.channel.send(`${args.slice(0).join(' ')}`);
 
             const modlogs = new Discord.MessageEmbed()
             .setColor('020f73')

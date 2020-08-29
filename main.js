@@ -69,6 +69,8 @@ client.on('message', message =>{
     client.commands.get('blacklist').execute(message, args);
     } else if (command === 'permblacklist'){
     client.commands.get('permblacklist').execute(message, args);
+    } else if (command === 'notice'){
+    client.commands.get('notice').execute(message, args);
     }
  });
 
