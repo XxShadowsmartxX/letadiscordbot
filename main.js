@@ -16,7 +16,7 @@ for(const file of commandFiles){
 }
     client.once('ready', () => {
     console.log('ALETA Bot is Online!');
-    client.user.setActivity('-support', { type: 'WATCHING' });
+    client.user.setActivity('ALETA || -support', { type: 'WATCHING' });
 });
 
 client.on('message', message =>{
