@@ -71,10 +71,6 @@ client.on('message', message =>{
     client.commands.get('permblacklist').execute(message, args);
     } else if (command === 'notice'){
     client.commands.get('notice').execute(message, args);
-    } else if (command === 'reload'){
-    client.commands.get('reload').execute(message, args);
-    } else if (command === 'shutdown'){
-    client.commands.get('shutdown').execute(message, args);
     }
  });
 
