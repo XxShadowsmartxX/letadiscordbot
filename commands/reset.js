@@ -7,10 +7,10 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
-        if (message.member.roles.cache.has('705082980770512996')){
+        if (message.member.roles.cache.has('713428869842993233')){
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
-            msg.send(`${args.slice(1).join(' ')}`)
+            msg.send(embed)
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('020f73')
