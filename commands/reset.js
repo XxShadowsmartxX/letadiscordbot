@@ -19,7 +19,7 @@ module.exports = {
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-reset**', inline: true },
-            { name: 'Command Author', value: `${message.author.username}#${message.author.discriminator}`, inline: true },
+            { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
         )
         .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')

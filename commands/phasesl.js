@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
         const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('#0C3350')
             .setTitle('Phase Server Lock Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`**This phase has been slocked!**\n\n> More phases will be hosted in the future by the LETA Instructor Team.`)
@@ -24,7 +24,7 @@ module.exports = {
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-phasesl**', inline: true },
-            { name: 'Command Author', value: `${message.author.username}#${message.author.discriminator}`, inline: true },
+            { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
         )
         .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')

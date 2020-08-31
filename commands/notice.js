@@ -9,7 +9,7 @@ module.exports = {
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
         const embed = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('#0C3350')
             .setAuthor('ALETA Administrative Message')
             .setDescription(`${args.slice(0).join(' ')}`)
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
@@ -22,7 +22,7 @@ module.exports = {
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-notice**', inline: true },
-            { name: 'Command Author', value: `${message.author.username}#${message.author.discriminator}`, inline: true },
+            { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
         )
         .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
