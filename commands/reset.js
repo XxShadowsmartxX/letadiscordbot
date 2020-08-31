@@ -10,7 +10,7 @@ module.exports = {
         if (message.member.roles.cache.has('713428869842993233')){
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
-            msg.send(embed)
+            msg.send(`${args.slice(1).join(' ')}`)
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('020f73')
