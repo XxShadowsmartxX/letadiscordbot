@@ -13,7 +13,7 @@ module.exports = {
             .setTitle('Academy Acceptance Notice')
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`To ${args[0]},\n\nYou have been successfully accepted and enrolled within the Aigio Law Enforcement Training Academy. We congratulate you on this achievement. You will need to complete 4 phases and a final exam at the end of your journey. After that, you will become a certified peace officer. Once again, congratulations.\n\n> Please rejoin the ALETA discord to get your updated roles automatically.\n> Be sure to join the ALETA Roblox Group if you haven't already.\n\n**Regards,**\nAigio Law Enforcement Training Academy;Admissions Team`)
-            .setFooter('Aigio Law Enforcement Traning Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+            .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addField('Notice Sent By', `${message.author}`, true)
             .setTimestamp()
             const msg = message.mentions.users.first() || 
