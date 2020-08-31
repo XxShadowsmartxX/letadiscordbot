@@ -12,13 +12,15 @@ module.exports = {
             .setColor('#0C3350')
             .setTitle('Academy Blacklist Notice')
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`To ${args[0]},\n\nYou have been **blacklisted** by the ALETA Administration. More informatioon regarding your blacklist can be found on the **'BLACKLISTS'** sheet which sits on the ALETA database.\nThis sort of blacklist is **appealable** after **90 days** of receiving the punishment.\nBlacklist appeals can be tracked on the **'ADMIN HUB'** sheet on the ALETA database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
+            .setDescription(`To ${args[0]},\n\nYou have been **blacklisted** by the ALETA Administration. More information regarding your blacklist can be found on the **'BLACKLISTS'** sheet which sits on the ALETA database.\nThis sort of blacklist is **appealable** after **90 days** of receiving the punishment.\nBlacklist appeals can be tracked on the **'ADMIN HUB'** sheet on the ALETA database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
             .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addField('Notice Sent By', `${message.author}`, true)
             .setTimestamp()
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
             msg.send(embed)
+
+            message.channel.send(`${message.author}, Blacklist notice successfully sent to ${args[0]}.`);
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('RED')

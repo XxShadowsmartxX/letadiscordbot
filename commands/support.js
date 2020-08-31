@@ -16,6 +16,8 @@ module.exports = {
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         message.author.send(embed);
 
+        message.channel.send(`${message.author}, server commands sent to your DMs.`);
+
         const modlogs = new Discord.MessageEmbed()
         .setColor('020f73')
         .setTitle('Support Command')

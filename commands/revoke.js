@@ -20,6 +20,8 @@ module.exports = {
             message.guild.members.cache.get(args[0])
             msg.send(embed)
 
+            message.channel.send(`${message.author}, Revocation notice successfully sent to ${args[0]}.`);
+
         const modlogs = new Discord.MessageEmbed()
         .setColor('RED')
         .setTitle('Revoke Command')

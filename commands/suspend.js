@@ -14,11 +14,13 @@ module.exports = {
             .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`To ${args[0]},\n\nYour certification has been **suspended** by the ALETA Administration. The duration of this suspension is: **${args.slice(0).join(' ')}**.\nInformation regarding your suspension can be found on the **'SUSPENSIONS'** sheet on the ALETA Database.\nIf your suspension is **longer than 2 weeks**, you are allowed to **appeal** it using the administrative hub form which can be found in the <#705431479433297971> channel. You may also appeal if you feel this suspension is false.\nYour investigation can be tracked on **'ADMIN HUB'** sheet on the ALETA Database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
             .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .addField('Notice Sent By', `${message.author.username}#${message.author.discriminator}`, true)
+            .addField('Notice Sent By', `${message.author}`, true)
             .setTimestamp()
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
             msg.send(embed)
+
+            message.channel.send(`${message.author}, Suspension notice successfully sent to ${args[0]}.`);
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('RED')
