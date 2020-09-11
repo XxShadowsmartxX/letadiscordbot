@@ -15,7 +15,8 @@ module.exports = {
             .setDescription(`**This phase has been slocked!**\n\n> More phases will be hosted in the future by the LETA Instructor Team.`)
             .setFooter('Slocked Time')
             .setTimestamp()
-        message.channel.send(embed);
+            const mst2 = message.client.channels.cache.get('714206440935522384');
+            mst2.send(embed);
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('ORANGE')
