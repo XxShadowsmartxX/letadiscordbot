@@ -17,9 +17,9 @@ module.exports = {
             .addField('Notice Sent By', `${message.author}`, true)
             .setTimestamp()
             const msg = message.mentions.users.first() || message.guild.members.cache.get(args[0])
+            if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
             msg.send(embed)
 
-            if(!msg) return message.channel.send('testing');
 
             message.channel.send(`${message.author}, **Acceptance** notice successfully sent to ${args[0]}.`);
 

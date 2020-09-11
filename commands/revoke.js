@@ -18,6 +18,7 @@ module.exports = {
             .setTimestamp()
             const msg = message.mentions.users.first() || 
             message.guild.members.cache.get(args[0])
+            if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
             msg.send(embed)
 
             message.channel.send(`${message.author}, **Certification Revocation** notice successfully sent to ${args[0]}.`);
