@@ -12,7 +12,7 @@ module.exports = {
             message.channel.send(`${args.slice(0).join(' ')}`);
 
             const modlogs = new Discord.MessageEmbed()
-            .setColor('020f73')
+            .setColor('BLURPLE')
             .setTitle('Say Command')
             .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addFields(

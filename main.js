@@ -71,6 +71,8 @@ client.on('message', message =>{
     client.commands.get('permblacklist').execute(message, args);
     } else if (command === 'notice'){
     client.commands.get('notice').execute(message, args);
+    } else if (command === 'jrinsaccept'){
+    client.commands.get('jrinsaccept').execute(message, args);
     }
  });
 
