@@ -3,13 +3,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
-    name: 'database', 
+    name: 'requestroles', 
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
 
-            message.channel.send(`${message.author}, LETA Database: https://docs.google.com/spreadsheets/d/11yw1ADhuWQ8XEXWhQrArVctraeN7v6tr_-sAlPN4UBM/edit?usp=sharing`)
+            const role = message.client.channels.cache.get('706042137510412308');
+            role.send(`<@&705082977209548870>, Username: ${message.author}\nRoles Requested: ${args.slice(0).join(' ')}\nDate and Time: `);
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('BLURPLE') 

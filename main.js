@@ -73,8 +73,14 @@ client.on('message', message =>{
     client.commands.get('notice').execute(message, args);
     } else if (command === 'jrinsaccept'){
     client.commands.get('jrinsaccept').execute(message, args);
-    } else if (command === 'db'){
-    client.commands.get('db').execute(message, args);
+    } else if (command === 'database'){
+    client.commands.get('database').execute(message, args);
+} else if (command === 'staffhb'){
+    client.commands.get('staffhb').execute(message, args);
+} else if (command === 'cadethb'){
+    client.commands.get('cadethb').execute(message, args);
+} else if (command === 'requestroles'){
+    client.commands.get('requestroles').execute(message, args);
     }
  });
 

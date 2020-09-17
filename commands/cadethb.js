@@ -3,13 +3,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
-    name: 'database', 
+    name: 'cadethb', 
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705092415899303977')){
-
-            message.channel.send(`${message.author}, LETA Database: https://docs.google.com/spreadsheets/d/11yw1ADhuWQ8XEXWhQrArVctraeN7v6tr_-sAlPN4UBM/edit?usp=sharing`)
+            
+            message.channel.send(`${message.author}, LETA Cadet Handbook: https://docs.google.com/document/d/1khTYcFTcbzlk8c469upt3lDfuTmxFRwLmvj_bIKHSiE/edit?usp=sharing\n**This handbook is not allowed to be shared with anyone**`)
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('BLURPLE') 
