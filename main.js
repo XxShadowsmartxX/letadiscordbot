@@ -73,6 +73,8 @@ client.on('message', message =>{
     client.commands.get('notice').execute(message, args);
     } else if (command === 'jrinsaccept'){
     client.commands.get('jrinsaccept').execute(message, args);
+    } else if (command === 'db'){
+    client.commands.get('db').execute(message, args);
     }
  });
 
