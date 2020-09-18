@@ -8,6 +8,8 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
+const database = require('./database/database');
+
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -17,6 +19,8 @@ for(const file of commandFiles){
     client.once('ready', () => {
     console.log('ALETA Bot is Online!');
     client.user.setActivity('ALETA || -support', { type: 'WATCHING' });
+
+    database.then(() => console.log("Connected to MongoDB.")).catch(err => console.log(err));
 });
 
 client.on('message', message =>{
