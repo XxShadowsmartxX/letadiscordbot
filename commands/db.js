@@ -7,7 +7,7 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
-        if (message.member.roles.cache.has('705092415899303977')){
+        if (message.member.roles.cache.has('705092415899303977') || message.member.roles.cache.has('705101158766870528')) {
 
             message.channel.send(`${message.author}, LETA Database: https://docs.google.com/spreadsheets/d/11yw1ADhuWQ8XEXWhQrArVctraeN7v6tr_-sAlPN4UBM/edit?usp=sharing`)
 
