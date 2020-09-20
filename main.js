@@ -82,8 +82,16 @@ client.on('message', message =>{
     client.commands.get('staffhb').execute(message, args);
 } else if (command === 'cadethb'){
     client.commands.get('cadethb').execute(message, args);
-} else if (command === 'requestroles'){
-    client.commands.get('requestroles').execute(message, args);
+} else if (command === 'warn'){
+    client.commands.get('warn').execute(message, args);
+} else if (command === 'checkwarns'){
+    client.commands.get('checkwarns').execute(message, args);
+} else if (command === 'slowmode'){
+    client.commands.get('slowmode').execute(message, args);
+} else if (command === 'mute'){
+    client.commands.get('mute').execute(message, args);
+} else if (command === 'kick'){
+    client.commands.get('kick').execute(message, args);
     }
  });
 

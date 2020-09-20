@@ -16,9 +16,12 @@ module.exports = {
             .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addField('Notice Sent By', `${message.author}`, true)
             .setTimestamp()
+
             const msg = message.mentions.users.first() || message.guild.members.cache.get(args[0])
             if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
             msg.send(embed)
+
+
 
 
             message.channel.send(`${message.author}, **Acceptance** notice successfully sent to ${args[0]}.`);
