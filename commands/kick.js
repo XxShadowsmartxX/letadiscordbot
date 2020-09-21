@@ -17,7 +17,7 @@ module.exports = {
             if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
 
             let reason = args.slice(1).join(" ");
-            if(!reason) return message.channel.send(`${message.author}, Please specify a reason for the warn.`);
+            if(!reason) return message.channel.send(`${message.author}, Please specify a reason for the kick.`);
 
             kicks.findOne(
                 { Guild: message.guild.id, User: user.id },

@@ -8,14 +8,14 @@ module.exports = {
     execute(message, args){
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
-            const mst3 = message.client.channels.cache.get('714206440935522384');
+            const mst3 = message.client.channels.cache.get('756650206128373871');
             mst3.send('<@&705938947305504824> <@&705082979784851596>');
         const embed = new Discord.MessageEmbed()
             .setColor('#0C3350')
             .setTitle('Phase 4 Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .setDescription(`A **Phase 4** is being hosted at the campus!\n\nDivisional at the yellow road lines. Grab a uniform if needed. PTS is in effect.\n\n**Phase 4 Host:** ${message.author}\n\n**Starting Time:** ${args.slice(0).join(' ')}\n\n> **Campus Link:** https://www.roblox.com/games/5046852624/ALETA-Campus?refPageId=703da718-c993-4ed5-b154-4b2f3017c2ba#`)
-            const mst2 = message.client.channels.cache.get('714206440935522384');
+            const mst2 = message.client.channels.cache.get('756650206128373871');
             mst2.send(embed);
 
         const modlogs = new Discord.MessageEmbed()
