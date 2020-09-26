@@ -9,7 +9,9 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
-        let user = message.mentions.users.first();
+        let user = message.mentions.members.first();
+
+        let user1 = message.mentions.users.first();
         
         if (message.member.roles.cache.has('492311659558469633') || ('707336925836607498')){
 
@@ -34,24 +36,10 @@ module.exports = {
                         },
                       ],
                     });
-                    const modlogs = new Discord.MessageEmbed()
-            .setColor('BLURPLE')
-            .setTitle('Warn Command')
-            .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .addFields(
-                { name: 'Command Usage', value: `**${message.content}**` },
-                { name: 'Command Used', value: '**-say**', inline: true },
-                { name: 'Command Author', value: `${message.author}`, inline: true },
-                { name: 'Command Channel', value: `${message.channel}`, inline: true },
-            )
-            .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setTimestamp()
-            const mst = message.client.channels.cache.get('749011808567951500');
-            mst.send(modlogs);
             
                     newKicks.save();
                     message.channel.send(
-                      `${user.tag} has been kicked with the reason of ${args
+                      `<@${user1.id}> has been kicked with the reason of ${args
                         .slice(1)
                         .join(" ")}. They now have 1 kick.`
                     );
@@ -63,7 +51,7 @@ module.exports = {
                     data.save();
                   
                     message.channel.send(
-                      `${user.tag} has been kicked with the reason of ${args
+                      `<@${user1.id}> has been kicked with the reason of ${args
                         .slice(1)
                         .join(" ")}. They know have ${data.Kicks.length} kicks.`)
                         
@@ -74,7 +62,20 @@ module.exports = {
                     
                         }
                     })
-                     
+                    const modlogs = new Discord.MessageEmbed()
+                    .setColor('BLURPLE')
+                    .setTitle('Kick Command')
+                    .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+                    .addFields(
+                        { name: 'Command Usage', value: `**${message.content}**` },
+                        { name: 'Command Used', value: '**-kick**', inline: true },
+                        { name: 'Command Author', value: `${message.author}`, inline: true },
+                        { name: 'Command Channel', value: `${message.channel}`, inline: true },
+                    )
+                    .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+                    .setTimestamp()
+                    const mst = message.client.channels.cache.get('749011808567951500');
+                    mst.send(modlogs);
                       
                 
 

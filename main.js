@@ -92,6 +92,14 @@ client.on('message', message =>{
     client.commands.get('mute').execute(message, args);
 } else if (command === 'kick'){
     client.commands.get('kick').execute(message, args);
+} else if (command === 'logs'){
+    client.commands.get('logs').execute(message, args);
+} else if (command === 'pass'){
+    client.commands.get('pass').execute(message, args);
+} else if (command === 'fail'){
+    client.commands.get('fail').execute(message, args);
+} else if (command === 'showexams'){
+    client.commands.get('showexams').execute(message, args);
     }
  });
 
