@@ -44,7 +44,7 @@ module.exports = {
         mst.send(modlogs);
 
         } else {
-            message.channel.send('Insufficient Permissions.');
+            message.channel.send(`${message.author}, Insufficient Permissions for **-accept** command.\n\nRoles required: **Admissions Team** or **Administration**`);
         }
 
     }

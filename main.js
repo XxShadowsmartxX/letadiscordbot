@@ -100,8 +100,10 @@ client.on('message', message =>{
     client.commands.get('fail').execute(message, args);
 } else if (command === 'showexams'){
     client.commands.get('showexams').execute(message, args);
-} else if (command === 'status'){
-    client.commands.get('status').execute(message, args);
+} else if (command === 'uptime'){
+    client.commands.get('uptime').execute(message, args);
+} else if (command === 'removewarn'){
+    client.commands.get('removewarn').execute(message, args);
     }
  });
 

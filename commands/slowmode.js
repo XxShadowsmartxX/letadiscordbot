@@ -21,7 +21,7 @@ module.exports = {
           
           message.channel.setRateLimitPerUser(args[0]);
           message.channel.send(
-            `Slowmode set to **${args[0]}**.`
+            `Slowmode set to **${args[0]}**.` 
           );
 
             const modlogs = new Discord.MessageEmbed()

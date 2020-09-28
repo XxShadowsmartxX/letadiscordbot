@@ -16,7 +16,7 @@ module.exports = {
             message.guild.members.cache.get(args[0])
             if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
 
-            const reason = args.slice(1).join(" ");
+            const reason = args.slice(0).join(" ");
             if(!reason) return message.channel.send(`${message.author}, Please specify a reason for the warn.`);
             
             warns.findOne(
@@ -61,7 +61,7 @@ module.exports = {
             .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
             .addFields(
                 { name: 'Command Usage', value: `**${message.content}**` },
-                { name: 'Command Used', value: '**-say**', inline: true },
+                { name: 'Command Used', value: '**-warn**', inline: true },
                 { name: 'Command Author', value: `${message.author}`, inline: true },
                 { name: 'Command Channel', value: `${message.channel}`, inline: true },
             )
