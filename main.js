@@ -18,7 +18,7 @@ for(const file of commandFiles){
 }
     client.once('ready', () => {
     console.log('ALETA Bot is Online!');
-    client.user.setActivity('ALETA || -support', { type: 'WATCHING' });
+    client.user.setActivity(`ALETA || -support`, { type: 'WATCHING' });
 
 });
 
@@ -100,6 +100,8 @@ client.on('message', message =>{
     client.commands.get('fail').execute(message, args);
 } else if (command === 'showexams'){
     client.commands.get('showexams').execute(message, args);
+} else if (command === 'status'){
+    client.commands.get('status').execute(message, args);
     }
  });
 

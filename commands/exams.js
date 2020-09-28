@@ -11,7 +11,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setColor('#0C3350')
             .setAuthor('ALETA Exams List', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`Below you will find all of the exams for the Aigio Law Enforcement Training Academy:\n\n**Phase 1 Exam:**\nhttps://docs.google.com/forms/d/e/1FAIpQLScekH9VwAulI9nXpcp5aVxNAAF0dxUPb18i6ZPNKU0uo4SatQ/viewform\n\n**Phase 2 Exam:**\nN/A\n\n**Phase 3 Exam:**\nN/A\n\n**Phase 4 Exam:**\nN/A\n\n**Final Exam:**\nN/A`)
+            .setDescription(`Below you will find all of the exams for the Aigio Law Enforcement Training Academy:\n\n**Phase 1 Exam:**\nhttps://docs.google.com/forms/d/e/1FAIpQLScekH9VwAulI9nXpcp5aVxNAAF0dxUPb18i6ZPNKU0uo4SatQ/viewform\n\n**Phase 2 Exam:**\nhttps://docs.google.com/forms/d/e/1FAIpQLSfeTk6wDHb5HV5UJSWEcv1FpFc7ucazVBOT3Y-RTjpkVGXzHw/viewform\n\n**Phase 3 Exam:**\nN/A\n\n**Phase 4 Exam:**\nN/A\n\n**Final Exam:**\nhttps://docs.google.com/forms/d/e/1FAIpQLSdQFQSGshPVhrPeFOdK5eXVFX7nSRfreXRXP--awUWm-55jLg/viewform`)
             .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
         message.channel.send(embed);
 
