@@ -88,8 +88,8 @@ client.on('message', message =>{
     client.commands.get('checkwarns').execute(message, args);
 } else if (command === 'slowmode'){
     client.commands.get('slowmode').execute(message, args);
-} else if (command === 'mute'){
-    client.commands.get('mute').execute(message, args);
+} else if (command === 'delete'){
+    client.commands.get('delete').execute(message, args);
 } else if (command === 'kick'){
     client.commands.get('kick').execute(message, args);
 } else if (command === 'logs'){

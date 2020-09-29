@@ -36,7 +36,7 @@ module.exports = {
         mst.send(modlogs);
 
         } else {
-            message.channel.send('Insufficient Permissions.');
+            message.channel.send(`${message.author}, Insufficient Permissions for **-phase1** command.\n\nRoles required: **LETA Employee**`);
         }
 
     }

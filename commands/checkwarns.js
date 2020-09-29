@@ -63,7 +63,7 @@ module.exports = {
     
 
         } else {
-            message.channel.send('Insufficient Permissions.');
+            message.channel.send(`${message.author}, Insufficient Permissions for **-blacklist** command.\n\nRoles required: **Moderator**`);
         }
 
     }

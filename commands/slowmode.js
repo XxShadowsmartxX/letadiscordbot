@@ -42,7 +42,7 @@ module.exports = {
     
 
         } else {
-            message.channel.send('Insufficient Permissions.');
+            message.channel.send(`${message.author}, Insufficient Permissions for **-slowmode** command.\n\nRoles required: **Moderator**`);
         }
 
     }

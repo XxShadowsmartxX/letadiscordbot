@@ -5,16 +5,16 @@ const client = new Discord.Client();
 module.exports = {
     name: 'phasesl', 
     description: "this is a youtube command!", 
-    execute(message, args){
+    execute(message, args){    
         message.delete()
         if (message.member.roles.cache.has('705082980770512996')){
         const embed = new Discord.MessageEmbed()
             .setColor('#0C3350')
             .setTitle('Phase Server Lock Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`**This phase has been slocked!**\n\n> More phases will be hosted in the future by the LETA Instructor Team.`)
-            .setFooter('Slocked Time')
-            .setTimestamp()
+            .setDescription(`**This phase has been slocked!**\n\n> More phases will be hosted in the future by the LETA Instructor Team.\n\n**Host:** ${message.author}`)
+            .setFooter(`Slocked Time:`)
+            .setTimestamp();
             const mst2 = message.client.channels.cache.get('756650206128373871');
             mst2.send(embed);
 
@@ -35,7 +35,7 @@ module.exports = {
         mst.send(modlogs);
 
         } else {
-            message.channel.send('Insufficient Permissions.');
+            message.channel.send(`${message.author}, Insufficient Permissions for **-phasesl** command.\n\nRoles required: **LETA Employee**`);
         }
 
     }
