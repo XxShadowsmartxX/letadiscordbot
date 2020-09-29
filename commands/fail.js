@@ -7,7 +7,9 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
-        if (message.member.roles.cache.has('705082980770512996') || ('705082977209548870')){
+        
+        if(message.member.roles.cache.has('705082977209548870') || message.member.roles.cache.has('705082980770512996')){
+            
         const embed = new Discord.MessageEmbed()
             .setColor('#0C3350')
             .setTitle('Final Exam Notice')

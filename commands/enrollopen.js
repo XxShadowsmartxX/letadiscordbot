@@ -7,7 +7,9 @@ module.exports = {
     description: "this is a youtube command!", 
     execute(message, args){
         message.delete()
-        if (message.member.roles.cache.has('705101158766870528') || ('705082977209548870')){
+        
+        if(message.member.roles.cache.has('705082977209548870') || message.member.roles.cache.has('705101158766870528')){
+
         const embed = new Discord.MessageEmbed()
             .setColor('#0C3350')
             .setTitle('Enrollment is Open!')

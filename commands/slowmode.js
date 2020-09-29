@@ -9,7 +9,7 @@ module.exports = {
     execute(message, args){
 
 
-        if (message.member.roles.cache.has('492311659558469633') || ('707336925836607498')){
+      if(message.member.roles.cache.has('705082980770512996')){
 
             if (!args[0])
             return message.channel.send(

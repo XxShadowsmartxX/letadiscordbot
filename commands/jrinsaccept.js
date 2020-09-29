@@ -21,7 +21,7 @@ module.exports = {
             msg.send(embed)
 
 
-            message.channel.send(`${message.author}, **Acceptance** notice successfully sent to ${args[0]}.`);
+            message.channel.send(`${message.author}, **Junior Instructor Acceptance** notice successfully sent to ${args[0]}.`);
 
 
         const modlogs = new Discord.MessageEmbed()
