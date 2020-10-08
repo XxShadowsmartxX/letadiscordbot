@@ -14,7 +14,7 @@ module.exports = {
             .setColor('#0C3350')
             .setTitle('Phase 2 Conclusion Notification')
             .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`**This phase 2** has **concluded!**\n\n**Phase Host:** ${message.author}\n\nMake sure to take the phase examination and complete it fully. Take your time.\n\n**Evidence of Phase:** ${args.slice(0).join(' ')}\n\n> **Examination Link:** https://docs.google.com/forms/d/e/1FAIpQLSfeTk6wDHb5HV5UJSWEcv1FpFc7ucazVBOT3Y-RTjpkVGXzHw/viewform`)
+            .setDescription(`**This phase 2** has **concluded!**\n\n**Phase Host:** ${message.author}\n\nMake sure to take the phase examination and complete it fully. Take your time.\n\n**Evidence of Phase:** ${args.slice(0).join(' ')}\n\n> **Examination Link:** https://forms.gle/6LdohuKCoqKT7Lf69`)
             const mst2 = message.client.channels.cache.get('756650206128373871');
             mst2.send(embed);
 
