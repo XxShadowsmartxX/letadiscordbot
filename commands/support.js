@@ -6,38 +6,48 @@ module.exports = {
     name: 'support', 
     description: "support command", 
     execute(message, args, channel){
-        message.delete()
-        if (message.member.roles.cache.has('705092415899303977')){
-        const support1 = new Discord.MessageEmbed()
-            .setColor('#0C3350')
+        
+        if (message.member.roles.cache.some(role =>['Verified'].includes(role.name))) {
+          
+const support3 = new Discord.MessageEmbed()
+            .setColor('#cc4040')
             .setTitle('Server Commands')
-            .setAuthor('ALETA Support Command', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription("```Phase Commands (Hosts Only)```\n**-phase1** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase1 11:45 PM PST\n\n**-phase2** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase2 11:45 PM PST\n\n**-phase3** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase3 11:45 PM PST\n\n**-phase4** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase4 11:45 PM PST\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n`Conlusion/Slock Commands`\n\n**-phase1cl** PHASE PICTURE LINK\n**Ex.** -phase1cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n**-phase2cl** PHASE PICTURE LINK\n**Ex.** -phase2cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n**-phase3cl** PHASE PICTURE LINK\n**Ex.** -phase3cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n**-phase4cl** PHASE PICTURE LINK\n**Ex.** -phase4cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n**-phasesl**\n**Ex.** -phasesl\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Enrollment Commands (Admissions/Administration)```\n(Administration) **-enrollopen** MONTH DAY TIME AM/PM TIMEZONE OF ENROLLMENT CLOSING\n**Ex.** -enrollopen October 1st, 11:45 PM PST\n\n(Administration) **-enrollclose** MONTH DAY TIME AM/PM TIMEZONE OF ENROLLMENT OPENING\n**Ex.** -enrollclose October 1st, 11:45 PM PST\n\n**-accept** MENTION DISCORD OR DISCORD ID (User has to be in the ALETA Server)\n**Ex.** -accept @S_hadowRBLX#8495 OR -accept 738056998784073728")
+            .setAuthor('CFMP Support Command', 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
+            .setDescription("```Role Permissions Guide```\nRC = Regiment Command\n\nCC = Company Command\n\nSL = Second Lieutenant\n\nPC = Platoon Command\n\nSM = Server Moderator\n\nTE = Training & Education\n\nADC = Admissions Command\n\nNS = NIS\n\nRP = Ranking Permissions")
+            message.author.send(support3)
+
+        const support1 = new Discord.MessageEmbed()
+            .setColor('#cc4040')
+            .setDescription("```Phase Commands (Hosts Only)```\n(TE) **-phase1** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase1 11:45 PM PST\n\n(TE) **-phase2** TIME OF SLOCK AM/PM TIMEZONE\n**Ex.** -phase2 11:45 PM PST\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n`Conlusion/Slock Commands`\n\n(TE) **-phase1cl** PHASE PICTURE LINK\n**Ex.** -phase1cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n(TE) **-phase2cl** PHASE PICTURE LINK\n**Ex.** -phase2cl https://gyazo.com/da603ed0de884b2dd3c2eabc73c6a6a5\n\n(TE) **-phasesl**\n**Ex.** -phasesl\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Recruitment Commands (Admissions/Administration)```\n(AD) **-recruitopen** MONTH DAY TIME AM/PM TIMEZONE OF RECRUITMENT CLOSING\n**Ex.** -recruitopen October 1st, 11:45 PM PST\n\n(AD) **-recruitclose** MONTH DAY TIME AM/PM TIMEZONE OF RECRUITMENT OPENING\n**Ex.** -recruitclose October 1st, 11:45 PM PST\n\n(AD) **-accept** MENTION DISCORD (User has to be in the CFMP Server)\n**Ex.** -accept @S_hadowRBLX#8495\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Department Logs Commands```\n(NIS, SL, CC, RC) **-wwarning** MENTION REASON\n**Ex.** -wwarning @S_hadowRBLX Testing\n\n(NIS, SL, CC, RC) **-strike** MENTION REASON\n**Ex.** -strike @S_hadowRBLX Testing\n\n(NIS, CC, RC) **-suspend** MENTION DURATION REASON\n**Ex.** -suspend @S_hadowRBLX 2 days Testing\n\n(NIS, PC, CC, RC) **-dlog MESSAGE**\n**Ex.** -dlog @S_hadowRBLX has been transferred.\n\n(NIS, CC, RC) **-adleave** MENTION\n**Ex. **-adleave @S_hadowRBLX\n\n(NIS, CC, RC) **-offadleave** MENTION\n**Ex. **-offadleave @S_hadowRBLX")
         message.author.send(support1);
 
-            const support2 = new Discord.MessageEmbed()
-            .setColor('#0C3350')
-            .setDescription("```Administrative Commands (Administration)```\n**-blacklist** MENTIONUSER (SHIFT+ENTER) REASON (User has to be in ALETA Server)\n**Ex.** -blacklist @S_hadowRBLX#8495\nTesting\nTesting\n\n**-permblacklist** MENTIONUSER (SHIFT+ENTER) REASON (User has to be in ALETA Server)\n**Ex.** -permblacklist @S_hadowRBLX#8495\nTesting\nTesting\n\n**-revoke** MENTIONUSER (SHIFT+ENTER) REASON (User has to be in ALETA Server)\n**Ex.** -revoke @S_hadowRBLX#8495\nTesting\nTesting\n\n**-suspend** MENTIONUSER DURATION (SHIFT+ENTER) REASON (User has to be in ALETA Server)\n**Ex.** -suspend @S_hadowRBLX#8495 14 weeks\nTesting\nTesting\n\n**-pass** MENTIONUSER (User has to be in ALETA Server)\n**Ex.** -pass @S_hadowRBLX#8495\n\n**-fail** MENTIONUSER (User has to be in ALETA Server)\n**Ex.** -fail @S_hadowRBLX#8495\n\n**-notice** PUTNOTICEHERE\n**Ex.** -notice Application will be halted!\n\n**-finalexam** (Opens final exam)\n**Ex.** -finalexam\n\n**-finalexamclose** (Closes final exam)\n**Ex.** -finalexamclose\n\n**-jrinsaccept** MENTIONUSER (User has to be in ALETA Server)\n**Ex.** -jrinsaccept @S_hadowRBLX#8495\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Public Commands```\n**-database** (Sends link to database)\n**Ex.** -database")
-            .setFooter('Aigio Law Enforcement Training Academy', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            message.author.send(support2);
+        const support2 = new Discord.MessageEmbed()
+            .setColor('#cc4040')
+            .setDescription("```Discharge Commands```\n(RC) **-hdischarge** USER\n**Ex.** -hdischarge @S_hadowRBLX\n\n(PC, CC, RC) **-gdischarge** USER\n**Ex.** -gdischarge @S_hadowRBLX\n\n(CC, RC) **-ddischarge** USER\n**Ex.** -ddischarge @S_hadowRBLX\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Ranking/Group Commands```\n(RP, CC, RC) **-setrank** USERNAME RANK\n**Ex.** -setrank S_hadowRBLX Sergeant\n(Sets rank in CFMP group)\n\n(ADC)**-acceptj** USERNAME\n**Ex.** -acceptj S_hadowRBLX\n(Accepts CFMP group join request)\n\n(ADC) **-denyj** USERNAME\n**Ex.** -denyj S_hadowRBLX\n(Declines CFMP group join request)\n\n(CC, RC) **-exile** USERNAME\n**Ex.** -exile S_hadowRBLX\n(Exiles user from CFMP group)\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n```Deployment Commands```\n(RC) **-deploy** SERVERNUMBER DEPLOYMENTTIME\n**Ex.** -deploy 1 1h30m\n\n(RC) **-exdeploy** SERVERNUMBER DEPLOYMENTTIME\n**Ex.** -exdeploy 2 30m\n\n(RC) **-enddeploy**\n**Ex.** -enddeploy")
+            .setFooter('Canadian Forces Military Police', 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
+        message.author.send(support2);
 
-        message.channel.send(`${message.author}, ALETA server commands sent to your DMs.`);
+message.delete()
+
+        message.channel.send(`${message.author}, CFMP server commands sent to your DMs.`);
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('020f73')
         .setTitle('Support Command')
-        .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setAuthor('CFMP Moderation Logs', 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-support**', inline: true },
             { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
+            { name: 'Command Guild/Server', value: `**${message.guild.name}**`, inline: true },
         )
-        .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setFooter('Canadian Forces Military Police','https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .setTimestamp()
 
-        const mst = message.client.channels.cache.get('749011808567951500');
-        mst.send(modlogs);
+    if(process.env.modchannel === 'false') return;
+    let modchannel1 = message.client.channels.cache.get(process.env.modchannel);
+        modchannel1.send(modlogs);
 
         } else {
             message.channel.send('Insufficient Permissions.');
