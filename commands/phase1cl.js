@@ -6,36 +6,45 @@ module.exports = {
     name: 'phase1cl', 
     description: "this is a youtube command!", 
     execute(message, args){
-        message.delete()
-        if (message.member.roles.cache.has('705082980770512996')){
-            const mst3 = message.client.channels.cache.get('756650206128373871');
-            mst3.send('<@&705088849692590260> <@&705082979784851596>');
+        
+        if (message.member.roles.cache.some(role =>['Regiment Command', 'T&E', 'T&E Staff', 'T&E Command', 'T&E Command', 'T&E Overseers'].includes(role.name))) {
+
         const embed = new Discord.MessageEmbed()
-            .setColor('#0C3350')
+            .setColor('#cc4040')
             .setTitle('Phase 1 Conclusion Notification')
-            .setAuthor('ALETA Phase System', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`**This phase 1** has **concluded!**\n\n**Phase Host:** ${message.author}\n\nMake sure to take the phase examination and complete it fully. Take your time.\n\n**Evidence of Phase:** ${args.slice(0).join(' ')}\n\n> **Examination Link:** https://forms.gle/gyiB2auKtLkMNCJM6`)
-            const mst2 = message.client.channels.cache.get('756650206128373871');
-            mst2.send(embed);
+            .setAuthor('CFMP Phase System' , 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
+            .setDescription(`**This phase 1** has **concluded!**\n\n**Phase Host:** ${message.author}\n\nMake sure you review your notes for the final exam!\n\n**Evidence of Phase:** ${args.slice(0).join(' ')}`)
+
+if(process.env.phasechannelid === 'false') return;
+    let phasechannel = message.guild.channels.cache.get(process.env.phasechannelid);
+
+const reason6 = args.slice(0).join(" ");
+if(!reason6) return message.channel.send(`${message.author}, Please post a picture link`);
+
+phasechannel.send('<@&823280090640941106>', embed);
+
+message.delete()
 
         const modlogs = new Discord.MessageEmbed()
         .setColor('ORANGE')
         .setTitle('Phase 1 Conclusion Command')
-        .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setAuthor('CFMP Moderation Logs', 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-phase1cl**', inline: true },
             { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
+            { name: 'Command Guild/Server', value: `**${message.guild.name}**`, inline: true },
         )
-        .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setFooter('Canadian Forces Military Police','https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .setTimestamp()
 
-        const mst = message.client.channels.cache.get('749011808567951500');
-        mst.send(modlogs);
+    if(process.env.modchannel === 'false') return;
+    let modchannel1 = message.client.channels.cache.get(process.env.modchannel);
+        modchannel1.send(modlogs);
 
         } else {
-            message.channel.send(`${message.author}, Insufficient Permissions for **-phase1cl** command.\n\nRoles required: **LETA Employee**`);
+            message.channel.send(`${message.author}, Insufficient Permissions for **-phase2cl** command.\n\nRoles required: **T&E**, **T&E Command, **T&E Staff**, **T&E Overseers**, or **Regiment Command**`).then(m => m.delete({ timeout: 6500}));
         }
     }
     }

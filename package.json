@@ -6,9 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "S_hadowRBLX",
+  "author": "S_hadowRBLX#8495",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "figlet": "^1.5.0",
+    "html.js": "^0.12.1",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.11.15",
+    "ms": "^2.1.3",
+    "noblox.js": "^4.8.4",
+    "node-fetch": "^2.6.1",
+    "pretty-ms": "^7.0.1",
+    "reconlx": "^1.1.2",
+    "superagent": "^6.1.0"
   }
 }

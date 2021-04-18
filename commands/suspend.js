@@ -6,47 +6,48 @@ module.exports = {
     name: 'suspend', 
     description: "this is a youtube command!", 
     execute(message, args){
-        message.delete()
-        if (message.member.roles.cache.has('705082977209548870')){
-        const embed = new Discord.MessageEmbed()
-            .setColor('#0C3350')
-            .setTitle('Certification Suspension Notice')
-            .setAuthor('ALETA Administrative Message', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .setDescription(`To ${args[0]},\n\nYour certification has been **suspended** by the ALETA Administration. The duration of this suspension is: **${args[1]} ${args[2]}**.\n\nYour certification has been suspended for the following reason(s):**${args.slice(3).join(" ")}**\n\nMore Information regarding your suspension can be found on the **'SUSPENSIONS'** sheet on the ALETA Database.\nIf your suspension is **longer than 2 weeks**, you are allowed to **appeal** it using the administrative hub form which can be found in the <#705431479433297971> channel. You may also appeal if you feel this suspension is false.\nYour investigation can be tracked on **'ADMIN HUB'** sheet on the ALETA Database.\n\n**Regards,**\nAigio Law Enforcement Training Academy Administration`)
-            .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
-            .addField('Notice Sent By', `${message.author}`, true)
-            .setTimestamp()
-            const msg = message.mentions.users.first() || 
-            message.guild.members.cache.get(args[0])
-            if(!msg) return message.channel.send(`${message.author}, Please specify a user by mentioning them.`);
 
-            const duration = args.slice(2).join(" ");
-            if(!duration) return message.channel.send(`${message.author}, Please specify a duration for suspending the certification.`);
+        if (message.member.roles.cache.some(role =>['NIS', 'Company Command', 'Regiment Command', 'NIS Command'].includes(role.name))) {
 
-            const reason = args.slice(3).join(" ");
-            if(!reason) return message.channel.send(`${message.author}, Please specify a reason for suspending the certification.`);
-            msg.send(embed)
+    if(process.env.logschannel === 'false') return;
+    let logchannel1 = message.guild.channels.cache.get(process.env.logschannel);
 
-            message.channel.send(`${message.author}, **Certification Suspension** notice successfully sent to ${args[0]}.`);
+                const reason43 = args[0];
+if(!reason43) return message.channel.send(`${message.author}, Please use the correct format: **-suspend USER DURATION REASON**.\n\nExample: **-suspend @S_hadowRBLX 2 weeks Testing**`);
 
+                const reason44 = args[1];
+if(!reason44) return message.channel.send(`${message.author}, Please use the correct format: **-suspend USER DURATION REASON**.\n\nExample: **-suspend @S_hadowRBLX 2 weeks Testing**`);
+
+                const reason41 = args[2];
+if(!reason41) return message.channel.send(`${message.author}, Please use the correct format: **-suspend USER DURATION REASON**.\n\nExample: **-suspend @S_hadowRBLX 2 weeks Testing**`);
+
+                const reason42 = args.slice(3).join(' ');
+if(!reason42) return message.channel.send(`${message.author}, Please use the correct format: **-suspend USER DURATION REASON**.\n\nExample: **-suspend @S_hadowRBLX 2 weeks Testing**`);
+
+        logchannel1.send(`${args[0]} has been **suspended** from duties for **${args[1]} ${args[2]}**. Suspension reason: **${args.slice(3).join(' ')}**. They will remain on administrative leave for the duration of the suspension.\n\n**Issued by:** ${message.author}\n<@&821910794307502101>`)
+
+message.delete()
+            
         const modlogs = new Discord.MessageEmbed()
-        .setColor('RED')
-        .setTitle('Suspend Command')
-        .setAuthor('ALETA Moderation Logs', 'https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setColor('GREEN')
+        .setTitle('Suspension Command')
+        .setAuthor('CFMP Moderation Logs', 'https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .addFields(
             { name: 'Command Usage', value: `**${message.content}**` },
             { name: 'Command Used', value: '**-suspend**', inline: true },
             { name: 'Command Author', value: `${message.author}`, inline: true },
             { name: 'Command Channel', value: `${message.channel}`, inline: true },
+            { name: 'Command Guild/Server', value: `**${message.guild.name}**`, inline: true },
         )
-        .setFooter('Aigio Law Enforcement Training Academy','https://media.discordapp.net/attachments/705093565113434212/736015262477844500/6c1e7537f9aa230b0a49494c49779dca.png')
+        .setFooter('Canadian Forces Military Police','https://cdn.discordapp.com/emojis/799646515496747069.png?v=1')
         .setTimestamp()
 
-        const mst = message.client.channels.cache.get('749011808567951500');
-        mst.send(modlogs);
+    if(process.env.modchannel === 'false') return;
+    let modchannel1 = message.client.channels.cache.get(process.env.modchannel);
+        modchannel1.send(modlogs);
 
         } else {
-            message.channel.send(`${message.author}, Insufficient Permissions for **-suspend** command.\n\nRoles required: **Administration**`);
+            message.channel.send(`${message.author}, Insufficient Permissions for **-suspend** command.\n\nRoles required: **NIS**, **Company Command**, or **Regiment Command**`);
         }
 
     }
